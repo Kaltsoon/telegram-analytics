@@ -15,8 +15,8 @@ from message_processor import MessageProcessor
 
 
 @click.command()
-@click.option('--input-file', default='input.json', help='File that contains the chat history in JSON format')
-def process_messages(input_file):
+@click.option('--input-file', default='input.json', help='File that contains the chat history in JSON format.')
+def process(input_file):
     initialize_database()
 
     dirname = os.path.dirname(__file__)
@@ -43,4 +43,4 @@ def process_messages(input_file):
 
 
 if __name__ == '__main__':
-    process_messages()
+    process()

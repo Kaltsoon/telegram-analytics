@@ -35,6 +35,14 @@ def create_tables(connection):
         );
     ''')
 
+    cursor.execute('''
+        create index tags_category_text on tags(category, text)
+    ''')
+
+    cursor.execute('''
+        create index tags_message_id on tags(message_id)
+    ''')
+
     connection.commit()
 
 

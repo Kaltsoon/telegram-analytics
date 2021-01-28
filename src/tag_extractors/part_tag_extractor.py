@@ -5,13 +5,13 @@ from tag_extractors.tag_extractor import TagExtractor
 PART_REGEX = r'part *([0-9][a-z]?)'
 
 
-def is_subpart(part):
+def is_sub_part(part):
     match = re.search('[a-z]$', part)
 
     return not match is None
 
 
-def get_part_in_subpart(part):
+def get_part_in_sub_part(part):
     match = re.search('([0-9])', part)
 
     return match.groups(0)[0]
@@ -24,8 +24,8 @@ class PartTagExtractor(TagExtractor):
         parts = set()
 
         for match in matches:
-            if is_subpart(match):
-                part = get_part_in_subpart(match)
+            if is_sub_part(match):
+                part = get_part_in_sub_part(match)
                 parts.update([match, part])
 
             parts.update([match])

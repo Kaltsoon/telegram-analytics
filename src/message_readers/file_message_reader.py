@@ -41,4 +41,4 @@ class FileMessageReader(MessageReader):
             messages = [Message(get_message_id(message), get_message_text(message), get_message_user_id(message))
                         for message in json_messages if message['type'] == 'message']
 
-        return messages[:2000]
+        return messages
