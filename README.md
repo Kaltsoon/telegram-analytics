@@ -1,6 +1,6 @@
 # Telegram Analytics
 
-Command line tool for analysing messages in a Telegram chat.
+Command line tool for analysing messages in a Telegram chat. Originally implemented for analysing messages in the [Full Stack Open](https://fullstackopen.com/) course's Telegram channel.
 
 ## What does it do?
 
